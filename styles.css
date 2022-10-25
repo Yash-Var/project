@@ -99,6 +99,11 @@ nav ul li a:hover:before{
   bottom: 0px;
   opacity: 1;
 }
+.m{
+  /* background-color: #ff004f; */
+  position: relative;
+  right: 10px;
+}
 .yash{
   background-color: #edecec;
   width:100%;
