@@ -101,8 +101,8 @@ nav ul li a:before{
   }
   .yash{
     background-color: #edecec;
-    width: 99vw;
-    height: 90vh;
+    width:100%;
+    height: 100vh;
     
     /* margin: 2% 20%; */
   }
@@ -114,7 +114,7 @@ nav ul li a:before{
     height: 10%;
     font-size:x-large;
 position: relative;
-top: 10%;
+top: 7%;
 left: 12%;
 font-family:'Courier New', Courier, monospace;
     /* background-color: #ff004f; */
