@@ -1,6 +1,6 @@
 
 const getALLProduct=async(req,res)=>{
-    throw new Error('testing aysnc error')
+   
     res.status(200).json({msg:"product is testing"})
 }
 const getProduct=async(req,res)=>{
