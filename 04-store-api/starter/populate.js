@@ -4,7 +4,7 @@ const connectDB = require("./db/connect");
 const product = require("./models/product");
 
 const jsonProducts = require("./products.json");
-// console.log(jsonProducts);
+// console.log(jsonProducts); 
 
 const start = async () => {
   try {
