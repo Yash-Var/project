@@ -5,9 +5,11 @@ const getALLJobs = async (req, res) => {
 const getJob= async (req, res) => {
   res.send("Single Job");
 };
+
 const createJob= async (req, res) => {
   res.json(req.user);
 };
+
 const updateJobs= async (req, res) => {
   res.send("Update Job");
 };
