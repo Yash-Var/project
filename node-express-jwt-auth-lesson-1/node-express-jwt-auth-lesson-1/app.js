@@ -28,7 +28,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCr
 app.get('*', checkUser);
 app.get('/', (req, res) => res.render('home'));
 app.get('/smoothies', requireAuth, (req, res) => res.render('smoothies'));
-app.post('/',async (req,res)=>{
+app.post('/',requireAuth,async (req,res)=>{
 try {
 let newdata=new data({
   name:req.body.name,
