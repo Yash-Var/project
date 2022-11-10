@@ -2,6 +2,8 @@ const Joi = require("joi");
 const bcrypt = require("bcrypt");
 const User = require("../models/index");
 const JwtService=require('../services/JwtServices')
+
+
 const register = async (req, res, next) => {
   const registerSchema = Joi.object({
     name: Joi.string().min(3).max(30).required(),
@@ -51,4 +53,8 @@ const register = async (req, res, next) => {
       res.json({ access_token});
 };
 
-module.exports = register;
+const login=(req,res)=>{
+res.send("yash varshney");
+}
+
+module.exports = {register,login};
