@@ -17,7 +17,7 @@ app.use(cookieParser());
 app.set('view engine', 'ejs');
 
 // database connection
-const dbURI = ' mongodb+srv://varshney:Sj55888@cluster0.jqzobx2.mongodb.net/)JWT_AUTH?retryWrites=true&w=majority';
+const dbURI = ' mongodb+srv://@cluster0.jqzobx2.mongodb.net/)JWT_AUTH?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
 .then((result) => app.listen(9000,()=>{
   console.log('running on port 9000');
