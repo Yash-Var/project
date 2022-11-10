@@ -14,7 +14,6 @@ Mobile:{
   email: {
     type: String,
     required: [true, "Please enter an email"],
-    unique: true,
     lowercase: true,
     validate: [isEmail, "Please enter a valid email"],
   },
@@ -26,6 +25,6 @@ Mobile:{
 
 
 
-const data = mongoose.model("data", userSchema);
+const data = mongoose.model("yash", userSchema);
 
 module.exports = data;
