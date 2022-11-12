@@ -1,94 +1,91 @@
-<%- include('partials/header'); -%>
-    <!DOCTYPE html>
-    <html lang="en">
-    <html>
+<!DOCTYPE html>
+<html lang="en">
+<html>
 
-    <head>
-        <script src="https://kit.fontawesome.com/de9d45e1c6.js" crossorigin="anonymous"></script>
-        <meta http-equiv="content-type">
-        <link rel="stylesheet" href="/css/book.css">
-        <title>Hospital</title>
-    </head>
+<head>
+    <script src="https://kit.fontawesome.com/de9d45e1c6.js" crossorigin="anonymous"></script>
+    <meta http-equiv="content-type">
+    <link rel="stylesheet" href="/css/book.css">
+    <title>Hospital</title>
+</head>
 
-    <body>
-        <div class="twoparts">
-            <div class="container">
-                <div class="containerhead">
-                    <label for="Search" class="label1">Choose a Hospital</label>
-                    <form action="" class="searchbar">
-                        <input type="text" id="myinput" placeholder="Search Nearby Hospitals....."
-                            onkeyup="searchFun()">
-                    </form>
-                    <label for="mention" class="label2">Nearby Hospitals</label>
-                </div>
-                <table id="mytable">
-                    <tr href="/smoothies">
-                        <td class='hfn'>Hillside Hospital
-                        <td>
-                        <td>7</td>
-                    </tr>
-                    <tr href="/smoothies">
-                        <td class='hfn'>Sagar Hospital
-                        <td>
-                        <td>7</td>
-                    </tr>
-                    <tr href="/smoothies">
-                        <td class='hfn'>Vasavi Hospital
-                        <td>
-                        <td>8</td>
-                    </tr>
-                    <tr href="/smoothies">
-                        <td class='hfn'>Ayu Health Hospital
-                        <td>
-                        <td>8</td>
-                    </tr>
-                    <tr onclick=window.location='/confirmation'>
-                        <td class='hfn'>London care Hospital
-                        <td>
-                        <td>8</td>
-                    </tr>
-                </table>
-                <div class="button">
-                    <a type="button" href="/smoothies" class="btn">BOOK AMBULANCE</a>
-                </div>
+<body>
+    <div class="twoparts">
+        <div class="container">
+            <div class="containerhead">
+                <label for="Search" class="label1">Choose a Hospital</label>
+                <form action="" class="searchbar">
+                    <input type="text" id="myinput" placeholder="Search Nearby Hospitals....." onkeyup="searchFun()">
+                </form>
+                <label for="mention" class="label2">Nearby Hospitals</label>
             </div>
-            <div class=container2>
-                <iframe src="/hos1map.html" width="1700px" height="900">
-                </iframe>
+            <table id="mytable">
+                <tr onclick=window.location='confirmation.html' ;>
+                    <td class='hfn'>Hillside Hospital
+                    <td>
+                    <td>7</td>
+                </tr>
+                <tr onclick=window.location='confirmation.html' ;>
+                    <td class='hfn'>Sagar Hospital
+                    <td>
+                    <td>7</td>
+                </tr>
+                <tr onclick=window.location='confirmation.html' ;>
+                    <td class='hfn'>Vasavi Hospital
+                    <td>
+                    <td>8</td>
+                </tr>
+                <tr onclick=window.location='confirmation.html' ;>
+                    <td class='hfn'>Ayu Health Hospital
+                    <td>
+                    <td>8</td>
+                </tr>
+                <tr onclick=window.location='confirmation.html' ;>
+                    <td class='hfn'>London care Hospital
+                    <td>
+                    <td>8</td>
+                </tr>
+            </table>
+            <div class="button">
+                <a type="button" href="confirmation.html" class="btn">BOOK AMBULANCE</a>
             </div>
-
         </div>
-        <!-- <%- include('partials/footer'); -%> -->
-        <script>
-            const searchFun = () => {
-                let filter = document.getElementById('myinput').value.toUpperCase();
+        <div class=container2>
+            <iframe src="/hos1map.html" width="1700px" height="900">
+            </iframe>
+        </div>
 
-                let myTable = document.getElementById('mytable');
+    </div>
+    <script>
+        const searchFun = () => {
+            let filter = document.getElementById('myinput').value.toUpperCase();
 
-                let tr = myTable.getElementsByTagName('tr');
+            let myTable = document.getElementById('mytable');
 
-                for (var i = 0; i < tr.length; i++) {
-                    let td = tr[i].getElementsByTagName('td')[0];
+            let tr = myTable.getElementsByTagName('tr');
 
-                    if (td) {
-                        let textvalue = td.textContent || td.innerHTML;
+            for (var i = 0; i < tr.length; i++) {
+                let td = tr[i].getElementsByTagName('td')[0];
 
-                        if (textvalue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].style.display = "";
-                        }
-                        else {
-                            tr[i].style.display = "none";
-                        }
+                if (td) {
+                    let textvalue = td.textContent || td.innerHTML;
+
+                    if (textvalue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    }
+                    else {
+                        tr[i].style.display = "none";
                     }
                 }
             }
-        </script>
-        <script>
-            $("tr").click
-                (
-                    window.location = "confirmation.html"
-                );
-        </script>
-    </body>
+        }
+    </script>
+    <script>
+        $("tr").click
+            (
+                window.location = "confirmation.html"
+            );
+    </script>
+</body>
 
-    </html>
+</html>
