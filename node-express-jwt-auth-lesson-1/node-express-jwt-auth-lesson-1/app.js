@@ -32,9 +32,11 @@ app.get('/smoothies', requireAuth, (req, res) => res.render('smoothies'));
 app.get('/vacc', requireAuth, (req, res) => res.render('vacc'));
 app.get('/book', requireAuth, (req, res) => res.render('book'));
 app.get('/bed', requireAuth, (req, res) => res.render('bed'));
+app.get('/apidonor', requireAuth, (req, res) => res.render('smoothies'));
 app.get('/doctor', requireAuth, (req, res) => res.render('doctor'));
 app.get('/confirmation', requireAuth, (req, res) => res.render('confirmation'));
 app.get('/bloodDonor', requireAuth, (req, res) => res.render('bloodDonor'));
+app.get('/addDonor', requireAuth, (req, res) => res.render('addDonor'));
 app.post('/',requireAuth,async (req,res)=>{
   try {
     let newdata=new data({
