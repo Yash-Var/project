@@ -1,7 +1,6 @@
 {
-  "name": "node-express-jwt-auth",
+  "name": "express-jwt-auth",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "dependencies": {
     "bcrypt": "^5.1.0",
@@ -9,9 +8,10 @@
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.3",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.23",
+    "nodemon": "^2.0.20",
     "validator": "^13.7.0"
   },
   "scripts": {
@@ -27,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/iamshaunjp/node-express-jwt-auth/issues"
   },
-  "homepage": "https://github.com/iamshaunjp/node-express-jwt-auth#readme"
+  "homepage": "https://github.com/iamshaunjp/node-express-jwt-auth#readme",
+  "description": ""
 }
