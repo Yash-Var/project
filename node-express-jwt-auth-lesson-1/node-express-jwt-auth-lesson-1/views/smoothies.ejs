@@ -12,6 +12,7 @@
       <% if (user) { %>
         <li>Welcome, <%= user.email %></li>
         <li><a href="/" class="btn">Home</a></li>
+        <li><a href="/bloodDonor" class="btn">Blood Donor</a></li>
         <li><a href="/logout" class="btn">Log out</a></li>
       <% } else { %>
         <li><a href="/login" class="btn">Log in</a></li>
@@ -20,6 +21,7 @@
     </ul>
     
   </nav>
+  <h1 style="text-align: center;">Donors who want to donote there blood</h1>
 <div id="yash">
   
 </div>
@@ -63,7 +65,7 @@
 <script>
   const donors= document.getElementById("yash");
 
-const url = 'http://localhost:8080/api';
+const url = 'http://localhost:9000/api';
 
 fetch(url).then((Response) => Response.json()).then((json) => {
   // <li class="recipe">

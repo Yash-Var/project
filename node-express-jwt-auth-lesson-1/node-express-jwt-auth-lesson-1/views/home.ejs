@@ -68,8 +68,7 @@
     <div class="content">
       <h3>stay safe, stay healthy</h3>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sed autem
-        vero? Magnam, est laboriosam!
+        we are here for your good wellness in every step!
       </p>
       <a href="#book" class="btn">
         contact us <span class="fas fa-chevron-right"></span>
@@ -79,25 +78,27 @@
   <section class="icons-container">
     <div class="icons">
       <i class="fas fa-ambulance"></i>
-      <h3>200+</h3>
+      <h3 class="num" data-val="50">00</h3>
       <p>ambulance at work</p>
     </div>
 
     <div class="icons">
       <i class="fas fa-users"></i>
-      <h3>500+</h3>
+    <div style="display: flex; flex-direction:column;"> <h3 class="num" data-val="100">000</h3>
+      
+    </div>
       <p>registered donors</p>
     </div>
 
     <div class="icons">
       <i class="fas fa-procedures"></i>
-      <h3>100+</h3>
+      <h3 class="num" data-val="200" >000</h3>
       <p>bed facility</p>
     </div>
 
     <div class="icons">
       <i class="fas fa-hospital"></i>
-      <h3>20+</h3>
+      <h3 class="num" data-val="20">00</h3>
       <p>working ngo's</p>
     </div>
   </section>
@@ -132,7 +133,7 @@
         </a>
       </div>
 
-      <div class="box">
+      <!-- <div class="box">
         <i class="fas fa-people-arrows"></i>
         <h3>Organs donors</h3>
         <p>
@@ -141,7 +142,7 @@
         <a href="/smoothies" class="btn">
           learn more <span class="fas fa-chevron-right"></span>
         </a>
-      </div>
+      </div> -->
 
       <div class="box">
         <i class="fa-solid fa-user-doctor"></i>
@@ -310,6 +311,23 @@
   <section>
       <script src="/js/toggle.js"></script>
       <script src="https://kit.fontawesome.com/6fce547056.js" crossorigin="anonymous"></script>
+      <script>
+        let valueDisplay=document.querySelectorAll(".num");
+        let interval=3000;
+        valueDisplay.forEach((valueDisplay)=>{
+          let startValue=0;
+          let endValue=parseInt(valueDisplay.getAttribute("data-val"));
+          let duration=Math.floor(interval/endValue);
+          let counter =setInterval(function(){
+            startValue+=1;
+            valueDisplay.textContent=startValue;
+            if(startValue==endValue){
+              clearInterval(counter);
+            }
+            
+          },duration)
+        })
+      </script>
 </body>
 
 </html>

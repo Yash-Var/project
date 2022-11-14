@@ -26,8 +26,9 @@ fetch(url).then((response) => response.json()).then((json) => {
         Beds +=
           "<h3>" +
           x.name +
-          "</h3>HospitalBeds: " +
+          "</h3>" + "<div> HospitalBeds: " +
           x.hospitalBeds +
+          "</div>"
           "<br/>";
       } else if(city==""){
         swal("Error !", "Please Enter city","error");
