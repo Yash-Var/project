@@ -116,13 +116,13 @@
                     </div>
                     <div class="box-box">
                         <label for="phone">Patient Phone number</label> <br>
-                        <input type="tel" name="phone" id="phone" placeholder="### ### ####">
+                        <input type="tel" name="phone" id="phone" placeholder="### ### ####" required>
                     </div>
                 </div>
                 <label for="address">Patient Address </label> <br>
-                <input type="text" name="street" id="street" placeholder="Street Address">
+                <input type="text" name="street" id="street" placeholder="Street Address" required>
                 <div class="box">
-                    <input type="text" name="city" id="city" placeholder="City">
+                    <input type="text" name="city" id="city" placeholder="City" required>
                     <select id="state" name="state">
                         <option value="">State</option>
                         <option value="AN">Andaman and Nicobar Islands</option>
@@ -168,15 +168,15 @@
                 <h3><u>Medical Information</u></h3> <br>
                 <div class="box">
                     <label for="previous">Have you previously attended our facility?</label><br>
-                    <input type="radio" name="attended-facility" id="attendedYes">
+                    <input type="radio" name="attended-facility" id="attendedYes" required>
                     <label for="">Yes</label>
-                    <input type="radio" name="attended-facility" id="attendedNo">
+                    <input type="radio" name="attended-facility" id="attendedNo" required>
                     <label for="">No</label>
                 </div>
                 <br>
                 <label for="if-yes">If Yes, Patient Medical Condition/History</label> <br>
                 <div class="box">
-                    <textarea name="history" id="history" cols="65" rows="10"></textarea>
+                    <textarea name="history" id="history" cols="65" rows="10" required></textarea>
                 </div>
                 <br>
                 <h3><u>Appointment Details</u></h3> <br>
@@ -205,11 +205,11 @@
                 <div class="box">
                     <div class="box-box">
                         <label for="">Appointment Date</label> <br>
-                        <input type="date" name="" id="appointment-date">
+                        <input type="date" name="" id="appointment-date" required>
                     </div>
                     <div class="box-box">
                         <label for="appointment-time">Time of Appointment</label> <br>
-                        <input type="time" name="" id="appointment-time">
+                        <input type="time" name="" id="appointment-time" required>
                     </div>
                 </div>
                 <br>
