@@ -13,6 +13,25 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <title>We Care</title>
+    <style>
+      .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  color: var(--color);
+  cursor: pointer;
+  font-size: 1.7rem;
+  background: #fff;
+}
+.btn:hover {
+  background: var(--color);
+  color: #fff;
+}
+    </style>
     
 </head>
 
@@ -26,8 +45,8 @@
     
         <% if (user) { %>
             <a>Welcome, <%= user.email %></a>
-            <a href="/" class="btn">Home</a>
-            <a href="/logout" class="btn">Log out</a>
+            <a href="/" >Home</a>
+            <a href="/logout" >Log out</a>
           <% } %>
     </nav>
 
@@ -43,27 +62,27 @@
         </div>
 
         <div class="column">
-            <form action="" id="register" >
+            <form id="register" >
                 <h2>Book Bed</h2>
 
                 <label for="">Name :</label>
                 <br>
-                <input type="text" id="name" placeholder="Enter your full name" required>
+                <input type="text"  name="name" id="name" placeholder="Enter your full name" required>
                 <br>
                 <label for="">Email :</label><br>
-                <input type="email" id="email" placeholder="abcdef@gamil.com" required>
+                <input type="email" name="email" id="email" placeholder="abcdef@gamil.com" required>
                 <br>
                 <label for="">Phone Number :</label><br>
-                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                <input type="String" name="phone_number" id="phone" placeholder="Enter your phone number" required>
                 <br>
                 <label for="">City :</label><br>
-                <input type="text" id="city" placeholder="Enter your preferred city (e.g. Indore)" required>
+                <input type="text" name="city" id="city" placeholder="Enter your preferred city (e.g. Indore)" required>
                 <br>
 
                 <label for="">Gender :</label><br>
                 <input name="Gender" id="gender" type="radio" value="Male" > Male <input name="Gender" type="radio"
-                    value="Female">Female
-                <input name="Gender" type="radio" value="Others">Others
+                    value="Female" >Female
+                <input  type="radio" value="Others">Others
                 <br><br>
                 Select Blood Group : <br>
 
@@ -80,9 +99,10 @@
                     <option>Unknown</option>
                 </datalist>
                 <br>
-            </form>
+              </form>
+              <button type="submit" class="btn" id="submitButton">Submit</button>
             
-            <input type="submit" value="Check Bed availability" id="submitButton" >
+            <!-- <input type="submit" value="Book Bed" id="submitButton" > -->
             
            
 
@@ -97,6 +117,7 @@
 
 
   <script src="/js/bed2.js"></script>
+
 </body>
 
 </html>

@@ -12,7 +12,7 @@
 * {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   transition: all 0.2s ease-out;
   text-decoration: none;
 }

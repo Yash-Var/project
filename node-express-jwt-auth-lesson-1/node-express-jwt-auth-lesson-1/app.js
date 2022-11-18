@@ -8,6 +8,9 @@ const bodyParser = require("body-parser");
 const app = express();
 const data = require("./models/contactform");
 const doctor = require("./models/doctor");
+// const Beds = require("./models/bed");
+// const logger = require("./sendEmail");
+// const fetchBedData =require('./public/js/bed2')
 // const router=require('./routes/api')
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -96,6 +99,23 @@ app.post("/addDonor", async (req, res) => {
     console.log(error);
   }
 });
+// app.post("/bed",logger, async (req, res) => {
+//   try {
+//     // console.log(req.body);
+//     let newBed = new Beds({
+//       name: req.body.name,
+//       email: req.body.email,
+//       phone_number: req.body.phone_number,
+//       city: req.body.city,
+//       gender: req.body.gender,
+//       // dob: req.body.dob,
+//     });
+//     newBed.save();
+//     res.redirect("/bed");
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
 app.get("/api", async (req, res) => {
   try {
     const member = await api.find({});
