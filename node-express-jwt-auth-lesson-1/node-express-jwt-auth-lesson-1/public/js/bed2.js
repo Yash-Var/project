@@ -22,22 +22,22 @@ fetch(url).then((response) => response.json()).then((json) => {
 
     for (let x of json.data.medicalColleges) {
       if (x.city === city) {
-        result.style.display="inline";
-        Beds +=
-          "<h3>" +
-          x.name +
-          "</h3>" + "<div> HospitalBeds: " +
-          x.hospitalBeds +
-          "</div>"
-          "<br/>";
-      } else if(city==""){
-        swal("Error !", "Please Enter city","error");
-      } else {
-        result.innerHTML+="Sorry! No Data Available ";
-      }
-    }
-    Beds += "</html>";
-    console.log(Beds);
-    result.innerHTML='<h1>Available Beds:</h1>'+Beds;
-  });
-}
+        
+        bedcount=bedcount+ x.hospitalBeds;
+        console.log(bedcount);
+       }
+     }
+     if(bedcount===0){
+       swal("Sorry, No bed found");
+     } else {
+       
+ if (confirm("Confirm booking") == true) {
+    swal("You will recieve a confirmation mail");
+    Sendmail(recvEmail,city)
+ } else {
+  swal("You canceled!");
+ }
+     }
+     
+   });
+ }
