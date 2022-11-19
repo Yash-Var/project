@@ -1,54 +1,48 @@
 const nodemailer = require("nodemailer");
-const express=require('express')
-const auto = require('./models/bed')
+const express = require("express");
+const auto = require("./models/bed");
 
 // console.log(__dirname)
-const logger=async(req,res, next)=>{
+const logger = async (req, res, next) => {
+  console.log(req.body.email);
 
-
-
-  console.log(req.body.email)
-
-const email=req.body.email;
+  const email = req.body.email;
   // const queryObject={}
   // if(email){
   //   queryObject.email=email
   // }
-  
+
   try {
-//     const products =await auto.find(queryObject)
-//      res.status(200).json({ products,nbHits:products.length})
-//    console.log(products[0].email);
-     const mail = async () => {
-   
+    //     const products =await auto.find(queryObject)
+    //      res.status(200).json({ products,nbHits:products.length})
+    //    console.log(products[0].email);
+    const mail = async () => {
       //  console.log(gen);
-       const config = nodemailer.createTransport({
-         host: "smtp.gmail.com",
-         port: 587,
-         secure: false,
-         auth: {
-           user: "",
-           pass: "",
-         },
-       });
-        await config.sendMail({
-         form: "test@gmail.com",
-         to: req.body.email,
-         subject: "test",
-         text: `Happy birthday `,
-         html:"<h1>This is html Demo</h1>",
-       });
-     };
-     
-     mail().catch((e) => console.log(e));
+      const config = nodemailer.createTransport({
+        host: "smtp.gmail.com",
+        port: 587,
+        secure: false,
+        auth: {
+          user:"",
+          pass: "",
+        },
+      });
+      await config.sendMail({
+        form: "test@gmail.com",
+        to: req.body.email,
+        subject: "confirmation",
+        text: ` Booked`,
+        html: "<h1>Bed is booked</h1>",
+      });
+    };
+
+    mail().catch((e) => console.log(e));
   } catch (error) {
-   console.log(error); 
+    console.log(error);
   }
-  
-  
 
   console.log("yash varshney");
-  next()
-}
+  next();
+};
 
-module.exports=logger
+module.exports = logger;
