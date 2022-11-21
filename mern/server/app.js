@@ -1,8 +1,12 @@
-require('dotenv').config()
-const exprees = require("express");
-const app = exprees();
+require("dotenv").config();
+const express = require("express");
+const app = express();
 const connectDB = require("./db/connect");
-const UserData=require('./models/userData')
+const UserData = require("./models/userData");
+
+const router =require('./router/index')
+app.use(express.json());
+app.use(router)
 app.get("/", (req, res) => {
   res.send("Hello world from the server");
 });
