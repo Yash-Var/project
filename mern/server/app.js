@@ -2,7 +2,7 @@ require('dotenv').config()
 const exprees = require("express");
 const app = exprees();
 const connectDB = require("./db/connect");
-
+const UserData=require('./models/userData')
 app.get("/", (req, res) => {
   res.send("Hello world from the server");
 });

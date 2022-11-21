@@ -23,8 +23,8 @@ const logger = async (req, res, next) => {
         port: 587,
         secure: false,
         auth: {
-          user:"",
-          pass: "",
+          user:"prashantrai7451@gmail.com",
+          pass: "qdocuqwerldrynak",
         },
       });
       await config.sendMail({
