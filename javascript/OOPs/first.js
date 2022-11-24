@@ -8,11 +8,13 @@ function BankAccount(customerName,Balance=0){
     this.customerName=customerName,
     this.Balance=Balance,
     this.accountNumber=Date.now()
-    this.deposite=function(amount){
-        this.Balance+=amount
-    }
+    // this.deposite=function(amount){
+    //     this.Balance+=amount
+    // }
 }
-
+BankAccount.prototype.deposite=function(amount){
+    this.Balance+=amount;
+}
 // const firstAccount=new BankAccount('yash',1000)
 // firstAccount.deposite(5000)
 // const secondAccount=new BankAccount('akshat')
