@@ -11,7 +11,7 @@ const Person = [
   },
   {
     name: "dev",
-    age: 20,
+    age: 30,
     Gender: "male",
   },
   {
@@ -21,9 +21,8 @@ const Person = [
   },
 ];
 
-const data=Person.map((e)=>{
-return e.age;
-})
+const data=[...new Set(Person.map((e)=> e.age)
+)]
 
 const newArray=Person.map((e)=>{
     return {
