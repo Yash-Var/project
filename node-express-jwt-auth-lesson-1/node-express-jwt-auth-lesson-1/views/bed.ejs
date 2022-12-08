@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
     <link rel="stylesheet" href="/css/bed.css">
     <link
       rel="stylesheet"
@@ -58,7 +59,8 @@
 
     <div class="row">
         <div class="column">
-            <img id="bed-img" src="/assets/Sick patient in bed vector.jpg" alt=""><br />
+                    <iframe width="600px" height="450px"  src="https://momento360.com/e/u/6ea426948126445da6b8224c479bdfa9?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=75&size=medium&display-plan=true"
+                     frameborder="0"></iframe>
         </div>
 
         <div class="column">
@@ -76,8 +78,21 @@
                 <input type="text" name="phone_number" id="phone" placeholder="Enter your phone number" required>
                 <br>
                 <label for="">City :</label><br>
-                <input type="text" name="city" id="city" placeholder="Enter your preferred city (e.g. Indore)" required>
+                <input type="text" name="city" id="city" placeholder="Enter your preferred city (e.g. Indore)" required onchange="setHospitals();"  onchange= "clearhospitals();">
+                  
                 <br>
+                
+              
+                <br>
+                
+                <label for="hospitals" class="form-label"> Select Hospital :</label>
+                <select onchange="selectedhospital()" id="hospitals" class="form-select" name="Hospitals">
+                  <option value="All" selected>All</option>
+                </select>
+            
+                <br>
+            
+           
 
                 <label for="">Gender :</label><br>
                 <input name="Gender" id="gender" type="radio" value="Male" > Male <input name="Gender" type="radio"

@@ -5,7 +5,7 @@ var date = document.getElementById('date');
 var results = document.getElementById('results');
 var state = document.getElementById('state');
 var selected_district = document.getElementById('district');
-var pincode= $("pincode");
+var pincode= $("pincode"); 
 
 var DISTRICT = $("input[type='radio'][name='district']:checked").val();
 

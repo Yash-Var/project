@@ -29,26 +29,39 @@ html {
 
 body {
  
-  font-size: 20px;
+  font-size: 25px;
   background: #fff; 
   
 }
 
 input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
   width: 80%;
-  padding: 5px;
+  padding: 10px;
   margin: 20px 0;
-  border: 2px solid #000 ;
+  border: 3px solid #99ddd0 ;
   border-radius: 5px;
+  font: 0.75em sans-serif;
+}
+
+select[id='hospitals']{
+ width: fit-content;
+  padding: 10px;
+  margin: 20px 0;
+  border: 3px solid #99ddd0 ;
+  border-radius: 5px;
+  font: 0.75em sans-serif;
 }
 
 input[type='radio'], input[name="Blood Group"] {
   
-  padding: 5px;
+  padding: 10px;
   margin: 20px 0;
-  border: 2px solid #000 ;
+  border: 3px solid  #99ddd0;
   border-radius: 5px;
+  font: 0.75em sans-serif;
 }
+
+
 
 input[type=submit] {
   width: 70%;
@@ -63,9 +76,6 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #35d7b9;
 }
-
-
-
 
 .column {
   float: left;
@@ -145,14 +155,10 @@ input[type=submit]:hover {
   display: none;
 }
 
-#results{
- border: 3px solid #444;
-  border-radius: 5px ;
- display: none;
-margin-left: 5px;
 
-}
-#results h3{
-  color: #16a085;
- 
+#hospitals{
+  padding: 5px;
+  margin: 20px 0;
+  border: 2px solid #000 ;
+  border-radius: 5px;
 }

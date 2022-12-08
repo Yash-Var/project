@@ -31,8 +31,8 @@ mongoose
     useCreateIndex: true,
   })
   .then((result) =>
-    app.listen(9000, () => {
-      console.log("running on port 9000");
+    app.listen(3030, () => {
+      console.log("running on port 3030");
     })
   )
   .catch((err) => console.log("yash", err));

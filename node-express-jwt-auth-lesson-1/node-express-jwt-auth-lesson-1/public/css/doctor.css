@@ -95,7 +95,7 @@
   form label[for=address]
   {
       align-self: flex-start;
-      margin-left: 20%;
+      margin-left: 37%;
   }
   
   #dob{
@@ -211,7 +211,13 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 2rem;
+     
     }
+    .column {
+      float: left;
+      width: 50%;
+    }
+    
     
    
     
@@ -254,4 +260,22 @@
   #appointment-type{
     width: 90%;
    }
+
+   .image{
+    width: 50%;
+  
+  
+    
+   }
+
+   .container{
+    width: 50%;
+    margin-top: -30px;
+   }
+   .row {
+    margin: 50px;
+    padding-top: 40px;
+    padding-left: 50px;
+   
+  }
     
