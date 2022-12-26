@@ -1,0 +1,11 @@
+Data : Data base is base where data store.
+
+
+There is two type of data base:
+- SQL based
+- No-SQL based 
+
+SQl based data is stored in the form of tables i.e row and column.Example : MySQL, etc
+
+No-SQL data is stored in the form of json format i.e object form . Example : MongoDB, etc
+
