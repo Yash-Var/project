@@ -2,8 +2,7 @@ import React from "react";
 import { Stack } from "@mui/material";
 import { categories } from "../utils/constants";
 
-const Slidebar = () => {
-  const selectedCategory = "New";
+const Slidebar = ({ selectedCategory, setSelectedCategory }) => {
   return (
     <Stack
       direction="row"
@@ -16,6 +15,7 @@ const Slidebar = () => {
       {categories.map((Category) => (
         <button
           className="category-btn"
+          onClick={() => setSelectedCategory(Category.name)}
           style={{
             background: Category.name === selectedCategory && "#FC1503",
             color: "white",
@@ -30,7 +30,13 @@ const Slidebar = () => {
           >
             {Category.icon}
           </span>
-          <span>{Category.name}</span>
+          <span
+            style={{
+              opacity: Category.name === selectedCategory ? "1" : "0.8",
+            }}
+          >
+            {Category.name}
+          </span>
         </button>
       ))}
     </Stack>
